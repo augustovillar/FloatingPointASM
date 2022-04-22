@@ -5,7 +5,11 @@
 
 SIGNAL         K /0000; s = 0000 ou 0001
 CARACTERISTICA K #00000; 0000 < c <  31 
-MANTISSA       K /0000; f (16 bits) mais significativo para menos significativo
+MANTISSA1      K /0000; 
+MANTISSA2      K /0000;
+MANTISSA3      K /0000;
+MANTISSA3      K /0000;
+f (16 bits) mais significativo para menos significativo
 ;  
 
 
@@ -19,8 +23,9 @@ FLOAT        K /0000;
             JP VOLTASIGNAL
 NEGATIVO    LV /0001 ; garrega um 
             MM SIGNAL ; 
-            JP VOLTASIGNAL           
-VOLTASIGNAL
+            JP VOLTASIGNAL 
+;depois de descobrir o sinal, precisamos transformartransformar a varivel em bits          
+VOLTASIGNAL 
 
 
 
